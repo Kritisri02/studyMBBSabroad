@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study MBBS Abroad - Apply Now</title>
+    <meta name="description" content="Apply for MBBS abroad in top countries like Russia, Uzbekistan, Kazakhstan, and more. Get started today!">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1E40AF',
+                        secondary: '#F59E0B',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-100 text-gray-900">
+    <section class="relative bg-primary text-white py-16 text-center">
+        <div class="container mx-auto px-6">
+            <h1 class="text-4xl font-bold">Study MBBS Abroad</h1>
+            <p class="mt-2 text-lg">Start your medical journey in top international universities</p>
+            <a href="#apply" class="mt-4 inline-block bg-secondary text-white px-6 py-3 rounded-lg font-semibold hover:bg-orange-600">Apply Now</a>
+        </div>
+    </section>
+
+    <section class="container mx-auto px-6 py-12 text-center">
+        <h2 class="text-2xl font-bold">Why Study MBBS Abroad?</h2>
+        <div class="grid md:grid-cols-3 gap-6 mt-6">
+            <div class="bg-white p-4 shadow rounded-lg">
+                <h3 class="font-semibold">Affordable Fees</h3>
+                <p>Lower tuition fees compared to private universities in India.</p>
+            </div>
+            <div class="bg-white p-4 shadow rounded-lg">
+                <h3 class="font-semibold">Globally Recognized</h3>
+                <p>Universities recognized by WHO, NMC, and other medical bodies.</p>
+            </div>
+            <div class="bg-white p-4 shadow rounded-lg">
+                <h3 class="font-semibold">No Entrance Exams</h3>
+                <p>Direct admission without NEET for some countries.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="container mx-auto px-6 py-12 text-center">
+        <h2 class="text-2xl font-bold">Top Countries for MBBS</h2>
+        <div class="grid md:grid-cols-3 gap-6 mt-6">
+            <div class="bg-white p-4 shadow rounded-lg">
+                <img src="https://via.placeholder.com/100" alt="Russia Flag" class="mx-auto">
+                <h3 class="mt-2 font-semibold">Russia</h3>
+            </div>
+            <div class="bg-white p-4 shadow rounded-lg">
+                <img src="https://via.placeholder.com/100" alt="Uzbekistan Flag" class="mx-auto">
+                <h3 class="mt-2 font-semibold">Uzbekistan</h3>
+            </div>
+            <div class="bg-white p-4 shadow rounded-lg">
+                <img src="https://via.placeholder.com/100" alt="Kazakhstan Flag" class="mx-auto">
+                <h3 class="mt-2 font-semibold">Kazakhstan</h3>
+            </div>
+        </div>
+    </section>
+
+    <section class="container mx-auto px-6 py-12 text-center bg-gray-200">
+        <h2 class="text-2xl font-bold">Admission Process & Eligibility</h2>
+        <ul class="list-disc mt-6 text-left mx-auto w-2/3">
+            <li>Step 1: Choose your country & university</li>
+            <li>Step 2: Submit application & required documents</li>
+            <li>Step 3: Receive admission confirmation</li>
+            <li>Step 4: Apply for a student visa</li>
+            <li>Step 5: Fly to your dream university</li>
+        </ul>
+    </section>
+
+    <section id="apply" class="container mx-auto px-6 py-12 text-center">
+        <h2 class="text-2xl font-bold">Apply for MBBS Abroad</h2>
+        <form id="leadForm" class="bg-white shadow-lg p-6 max-w-md mx-auto mt-6 rounded-lg">
+            <div class="mb-4">
+                <label class="block font-semibold text-left">Full Name</label>
+                <input type="text" id="name" class="w-full border rounded px-3 py-2" required>
+            </div>
+            <div class="mb-4">
+                <label class="block font-semibold text-left">Email</label>
+                <input type="email" id="email" class="w-full border rounded px-3 py-2" required>
+            </div>
+            <div class="mb-4">
+                <label class="block font-semibold text-left">Phone</label>
+                <input type="tel" id="phone" class="w-full border rounded px-3 py-2" required>
+            </div>
+            <div class="mb-4">
+                <label class="block font-semibold text-left">Preferred Country</label>
+                <select id="country" class="w-full border rounded px-3 py-2" required>
+                    <option value="">Select Country</option>
+                    <option value="Russia">Russia</option>
+                    <option value="Uzbekistan">Uzbekistan</option>
+                    <option value="Kazakhstan">Kazakhstan</option>
+                </select>
+            </div>
+            <button type="submit" class="bg-primary text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 w-full">Submit</button>
+        </form>
+    </section>
+
+
+    <script>
+        document.getElementById('leadForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            let name = document.getElementById('name').value.trim();
+            let email = document.getElementById('email').value.trim();
+            let phone = document.getElementById('phone').value.trim();
+            let country = document.getElementById('country').value;
+
+            if (!name || !email || !phone || !country) {
+                alert("All fields are required!");
+                return;
+            }
+            alert("Thank you! Your application has been submitted.");
+            this.reset();
+        });
+    </script>
+
+</body>
+</html>
